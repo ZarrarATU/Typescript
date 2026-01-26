@@ -1,4 +1,4 @@
-import './style.css'
+
 
 let views: string | number = 10
 
@@ -27,3 +27,34 @@ for(const value of array){
 
 
 console.log(undef,'saar');
+
+
+let threeName: 'name1' | 'name2' | 'name3' = 'name1'
+
+threeName = 'name2'
+// threeName = 'name4'
+
+
+const numbers: (string|number|boolean)[] = ['12','24',12,24];
+
+numbers[0] = true
+
+
+let order = [
+    {order: 24455,},
+    {order: 25655,},
+    {order: 24675,},
+    {order: 22355,},
+]
+
+let currentOrder: number | undefined;
+
+for(let i = 0; i < order.length; i++){
+    if(order[i].order === 24675 ){
+        currentOrder = order[i].order;
+        break;
+    }
+}
+
+console.log(currentOrder);
+
